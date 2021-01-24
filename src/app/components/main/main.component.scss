@@ -1,0 +1,116 @@
+@import '../../../styles.scss';
+
+#webpage {
+  #background {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%), url(../../../assets/ch-snow-4.jpeg);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  #contenido {
+    display: flex;
+    height: 100vh;
+
+    .menu {
+      flex: 20%;
+      z-index: 2;
+      background: #421bb98a;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 330px;
+
+      .image {
+        flex: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+          width: 280px;
+          height: 280px;
+          border-radius: 100%;
+          border: 16px solid #ffffff5e;
+          margin: auto;
+          content: url('../../../assets/ch-arriba.png');
+        }
+      }
+      .lista {
+        flex: 24%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'raleway';
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin: auto;
+        cursor: pointer;
+        justify-content: space-around;
+        text-shadow: 1px 1px 2px #00000094;
+        div:hover {
+          color: #421bb98a !important;
+          transition: 0.3s ease-out;
+        }
+      }
+      .contacto {
+        flex: 30%;
+      }
+    }
+
+    .main {
+      flex: 80%;
+      z-index: 1;
+      overflow-y: scroll;
+      .seccion {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .seccion1 {
+      .title {
+        .name {
+          position: relative;
+          top: 100px;
+          font-size: 60px;
+          font-family: permanente;
+          color: #545353;
+          width: 100%;
+          text-align: center;
+        }
+        .profesion {
+          position: relative;
+          top: 63px;
+          font-size: 40px;
+          font-family: 'permanente';
+          width: 100%;
+          text-align: center;
+          padding-left: 230px;
+          color: #421bb98a;
+        }
+        .soon {
+          position: relative;
+          top: 400px;
+          float: right;
+          font-size: 300px;
+          font-family: 'permanente';
+          padding-right: 50px;
+          color: #000000e0;
+        }
+      }
+    }
+
+    .seccion2 {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.87) 80%, rgba(0, 212, 255, 0) 100%);
+    }
+    .seccion3 {
+      background: white;
+    }
+    .seccion4 {
+      background: white;
+    }
+  }
+}

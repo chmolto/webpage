@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+$fa-font-path: '~font-awesome/fonts';
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
+
+@font-face {
+  font-family: 'raleway';
+  src: url('/assets/Raleway-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'notosans';
+  src: url('/assets/NotoSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'bodoni';
+  src: url('/assets/BodoniModa-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+  font-family: 'permanente';
+  src: url('/assets/PermanentMarker-Regular.ttf');
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.562);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #421bb98a;
+  border-radius: 10px;
+}
