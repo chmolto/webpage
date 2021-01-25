@@ -7,15 +7,22 @@
         <img class="shadow" />
       </div>
       <div class="lista">
-        <div>¿QUIÉN SOY?</div>
-        <div>EXPERIENCIA</div>
-        <div>FORMACIÓN</div>
-        <div>TECNOLOGÍAS</div>
-        <div>PROYECTOS</div>
+        <div (click)="scrollTo('seccion2')">¿QUIÉN SOY?</div>
+        <div (click)="scrollTo('seccion3')">EXPERIENCIA</div>
+        <div (click)="scrollTo('seccion4')">FORMACIÓN</div>
+        <div (click)="scrollTo('seccion5')">TECNOLOGÍAS</div>
+        <div (click)="scrollTo('seccion6')">PROYECTOS</div>
       </div>
       <div class="contacto">
-        <!-- <i class="fab fa-github"></i>
-        <i class="fab fa-mail"></i> -->
+        <div class="iconos">
+          <a href="https://www.github.com/christianfus" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="mailto:christianfus@protonmail.com" target="_blank">
+            <i class="fa fa-inbox"></i>
+          </a>
+          <i class="fas fa-file-pdf"></i>
+        </div>
       </div>
     </div>
     <div class="main">
@@ -23,12 +30,29 @@
         <div class="title">
           <p class="name">CHRISTIAN MOLTÓ</p>
           <p class="profesion">WEB DEVELOPER</p>
-          <p class="soon">TBA</p>
         </div>
       </div>
-      <div class="seccion seccion2"></div>
-      <div class="seccion seccion3"></div>
-      <div class="seccion seccion4"></div>
+
+      <div class="seccion seccion2">
+        <div class="title-seccion">¿Quién soy?</div>
+        <div class="foto">
+          <img class="el-yeti" src="/assets/el-yeti.png" />
+          <img class="tirita" src="/assets/tirita.png" />
+          <p class="pie-foto">Christian en las nieves CIRCA 2020</p>
+        </div>
+      </div>
+      <div class="seccion seccion3">
+        <div class="title-seccion">Experiencia</div>
+      </div>
+      <div class="seccion seccion4">
+        <div class="title-seccion">Formación</div>
+      </div>
+      <div class="seccion seccion5">
+        <div class="title-seccion">Tecnologías</div>
+      </div>
+      <div class="seccion seccion6">
+        <div class="title-seccion">Proyectos</div>
+      </div>
     </div>
   </div>
 </div>

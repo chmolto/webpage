@@ -2,13 +2,14 @@
 
 #webpage {
   #background {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%), url(../../../assets/ch-snow-4.jpeg);
+    background: url(../../../assets/ch-snow-4.jpeg);
     height: 100vh;
-    width: 100vw;
+    width: 2000px;
     position: absolute;
     pointer-events: none;
     opacity: 0.5;
     z-index: 0;
+    right: 0;
   }
 
   #contenido {
@@ -42,21 +43,40 @@
         flex: 24%;
         display: flex;
         flex-direction: column;
-        font-family: 'raleway';
-        font-size: 30px;
-        font-weight: bold;
-        color: white;
+        font-size: 26px;
+        font-family: 'comfort';
+        color: #ffffffdd;
         margin: auto;
         cursor: pointer;
         justify-content: space-around;
-        text-shadow: 1px 1px 2px #00000094;
-        div:hover {
-          color: #421bb98a !important;
-          transition: 0.3s ease-out;
+        user-select: none;
+        a:hover {
+          color: #ffffff !important;
+          transition: 0.1s ease-out;
         }
       }
+
       .contacto {
         flex: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+        .iconos {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          i {
+            font-size: 60px !important;
+            padding: 10px;
+            color: #ffffff5e;
+            cursor: pointer;
+            &:hover {
+              color: #ffffff8e !important;
+              transition: 0.3s ease-out;
+            }
+          }
+        }
       }
     }
 
@@ -67,10 +87,24 @@
       .seccion {
         height: 100%;
         width: 100%;
+        border-bottom: 1px solid black;
+        .title-seccion {
+          position: relative;
+          font-size: 60px;
+          padding: 20px;
+          font-family: 'permanente';
+          width: 100%;
+          color: #421bb98a;
+        }
+      }
+      .seccion:not(:first-child) {
+        background: white;
       }
     }
 
     .seccion1 {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7931547619047619) 25%, rgba(0, 212, 255, 0) 100%);
+
       .title {
         .name {
           position: relative;
@@ -91,26 +125,43 @@
           padding-left: 230px;
           color: #421bb98a;
         }
-        .soon {
-          position: relative;
-          top: 400px;
-          float: right;
-          font-size: 300px;
-          font-family: 'permanente';
-          padding-right: 50px;
-          color: #000000e0;
-        }
       }
     }
 
     .seccion2 {
-      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.87) 80%, rgba(0, 212, 255, 0) 100%);
+      .foto {
+        position: relative;
+        width: fit-content;
+        border: 1px solid #80808014;
+        top: -50px;
+        right: -53vw;
+        transform: rotate(5deg);
+        .tirita {
+          width: 140px;
+          position: absolute;
+          top: -10px;
+          left: -20px;
+        }
+        .pie-foto {
+          font-size: 12px;
+          position: absolute;
+          bottom: -6px;
+          right: 11px;
+          color: #00000082;
+        }
+        .el-yeti {
+          width: 340px;
+          border: 10px solid #0000000f;
+          border-bottom: 40px solid #0000000f;
+          box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25) !important;
+        }
+      }
     }
-    .seccion3 {
-      background: white;
-    }
-    .seccion4 {
-      background: white;
-    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: none;
   }
 }
