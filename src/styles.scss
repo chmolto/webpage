@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~material-icons/iconfont/material-icons.css';
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
@@ -16,6 +17,11 @@ $fa-font-path: '~font-awesome/fonts';
   src: url('/assets/Comfortaa-VariableFont_wght.ttf');
 }
 
+@font-face {
+  font-family: 'inter';
+  src: url('/assets/Inter-VariableFont_slnt\,wght.ttf');
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -27,4 +33,19 @@ $fa-font-path: '~font-awesome/fonts';
 ::-webkit-scrollbar-thumb {
   background: #421bb98a;
   border-radius: 10px;
+}
+html,
+body {
+  background: #ffffff;
+  height: 100%;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

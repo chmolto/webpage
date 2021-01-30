@@ -9,25 +9,30 @@
       <div class="lista">
         <div (click)="scrollTo('seccion2')">¿QUIÉN SOY?</div>
         <div (click)="scrollTo('seccion3')">EXPERIENCIA</div>
-        <div (click)="scrollTo('seccion4')">FORMACIÓN</div>
-        <div (click)="scrollTo('seccion5')">TECNOLOGÍAS</div>
-        <div (click)="scrollTo('seccion6')">PROYECTOS</div>
+        <div (click)="scrollTo('seccion4')">TECNOLOGÍAS</div>
+        <div (click)="scrollTo('seccion5')">PROYECTOS</div>
+        <a href="/assets/christian-molto-cv.pdf" download="christian-molto-cv.pdf" matTooltip="DESCARGAR" matTooltipPosition="below">
+          <div>CURRÍCULUM</div></a
+        >
       </div>
       <div class="contacto">
+        <span>CONTACTO</span>
         <div class="iconos">
           <a href="https://www.github.com/christianfus" target="_blank">
-            <i class="fa fa-github"></i>
+            <i class="devicon-github-original"></i>
           </a>
           <a href="mailto:christianfus@protonmail.com" target="_blank">
             <i class="fa fa-inbox"></i>
           </a>
-          <i class="fas fa-file-pdf"></i>
+          <a href="https://www.linkedin.com/in/christian-molt%C3%B3-51b449186/" target="_blank">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
         </div>
       </div>
     </div>
     <div class="main">
       <div class="seccion seccion1">
-        <div class="title">
+        <div data-aos="zoom-in" data-aos-duration="1000" class="title">
           <p class="name">CHRISTIAN MOLTÓ</p>
           <p class="profesion">WEB DEVELOPER</p>
         </div>
@@ -35,22 +40,53 @@
 
       <div class="seccion seccion2">
         <div class="title-seccion">¿Quién soy?</div>
-        <div class="foto">
+        <div data-aos="flip-up" data-aos-duration="1000" class="foto">
           <img class="el-yeti" src="/assets/el-yeti.png" />
           <img class="tirita" src="/assets/tirita.png" />
-          <p class="pie-foto">Christian en las nieves CIRCA 2020</p>
+          <p class="pie-foto">Christian de las nieves CIRCA 2020</p>
+        </div>
+        <div class="texto">
+          Soy un programador curioso y con ganas de aprender las tecnologías mas punteras del sector web. Aunque el grueso de mi experiencia
+          sea como frontend, también tengo experiencia montando sistemas de integración continua (CI/CD), haciendo testing E2E y en el
+          backend. Habituado a trabajar con metodologías de trabajo ágiles y sistemas de control de versiones. Además soy un entusiasta del
+          mundo crypto y todo lo relacionado con la blockchain. #DeFi
         </div>
       </div>
       <div class="seccion seccion3">
         <div class="title-seccion">Experiencia</div>
+
+        <div data-aos="fade-right" data-aos-duration="1000" class="bloque-experiencia bloque-experiencia-1">
+          <p class="title">
+            Android developer @ <span>CREATIVE CITY MANCHESTER</span
+            ><span (click)="openManchesterGallery()" class="material-icons manchester-gallery"> collections </span>
+          </p>
+          <p class="content">
+            Cursé las FCT's con la beca de FCTEuropa en Mánchester (UK), durante esta me encargué de diseñar y crear una aplicación Android
+            desde cero junto a la ayuda de la CEO adaptándome a las necesidades que presentaba la empresa.
+          </p>
+        </div>
+
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="bloque-experiencia bloque-experiencia-2">
+          <p class="title">Web developer @ <span>GEINFOR</span></p>
+          <p class="content">
+            Participé en el diseño de un sistema de gestión empresarial desde cero con las tecnologías mas novedosas dentro del sector,
+            trabajando tanto en la capa de back, como en la de frontend, aunque es en esta última donde más crecí como programador.
+          </p>
+        </div>
+
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="bloque-experiencia bloque-experiencia-3">
+          <p class="title">Proyectos personales @ <span>ME</span></p>
+          <p class="content">
+            Entre mis proyectos se encuentran desde apliaciones programadas con Angular (front) + NestJS, TypeORM y postgres (back). Hasta
+            aplicaciones conectadas a la blockchain a través de web3 con contratos inteligentes escritos por mi (Solidity + React).
+            <span (click)="scrollTo('seccion5')" class="mas-info">(+ info)</span>
+          </p>
+        </div>
       </div>
       <div class="seccion seccion4">
-        <div class="title-seccion">Formación</div>
-      </div>
-      <div class="seccion seccion5">
         <div class="title-seccion">Tecnologías</div>
       </div>
-      <div class="seccion seccion6">
+      <div class="seccion seccion5">
         <div class="title-seccion">Proyectos</div>
       </div>
     </div>
