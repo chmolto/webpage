@@ -1,6 +1,40 @@
 <div id="webpage">
   <div id="background"></div>
 
+  <nav id="mobile-menu" class="navbar shadow-sm navbar-expand-lg navbar-light bg-light">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li (click)="scrollTo('seccion2')" class="nav-item">
+          <a class="nav-link">¿QUIÉN SOY?</a>
+        </li>
+        <li (click)="scrollTo('seccion3')" class="nav-item">
+          <a class="nav-link">EXPERIENCIA</a>
+        </li>
+        <li (click)="scrollTo('seccion4')" class="nav-item">
+          <a class="nav-link">TECNOLOGÍAS</a>
+        </li>
+        <li (click)="scrollTo('seccion5')" class="nav-item">
+          <a class="nav-link">PROYECTOS</a>
+        </li>
+        <li class="nav-item">
+          <a href="/assets/christian-molto-cv.pdf" download="christian-molto-cv.pdf" class="nav-link">CURRÍCULUM</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <div id="contenido">
     <div class="menu shadow">
       <div class="image">

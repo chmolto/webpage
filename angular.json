@@ -30,7 +30,11 @@
               "node_modules/aos/dist/aos.css",
               "node_modules/devicon/devicon.min.css"
             ],
-            "scripts": ["node_modules/aos/dist/aos.js"],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/aos/dist/aos.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

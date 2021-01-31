@@ -17,7 +17,6 @@ export class MainComponent implements OnInit {
     AOS.init({
       offset: 200,
       delay: 100,
-      once: true,
     })
   }
 
@@ -36,11 +35,4 @@ export class MainComponent implements OnInit {
       scrollStrategy: new NoopScrollStrategy(),
     })
   }
-
-  /* public descargarCurriculum() {
-   var link = document.createElement('a')
-   link.href = url
-   link.download = 'christian-molto-cv.pdf'
-   link.dispatchEvent(new MouseEvent('click'))
-  } */
 }
