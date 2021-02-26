@@ -3,14 +3,20 @@ import { MatDialog } from '@angular/material'
 import { DialogComponent, DIALOG_TYPES } from './dialog-components/dialog/dialog.component'
 import AOS from 'aos'
 import { NoopScrollStrategy } from '@angular/cdk/overlay'
+import { fromEvent } from 'rxjs'
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
+  public DIALOG_TYPES = DIALOG_TYPES
+  public languageIsEnglish = true
   constructor(private matDialog: MatDialog) {
-    console.log(navigator.language)
+    if (navigator.language === 'es-ES') {
+      this.languageIsEnglish = false
+    }
+    this.addColorListeners()
   }
 
   ngOnInit() {
@@ -29,10 +35,40 @@ export class MainComponent implements OnInit {
     })
   }
 
-  public openManchesterGallery() {
+  public openDialog(type: string) {
     this.matDialog.open(DialogComponent, {
-      data: { type: DIALOG_TYPES.MANCHESTER },
+      data: { type },
       scrollStrategy: new NoopScrollStrategy(),
     })
+  }
+
+  private addColorListeners() {
+    setTimeout(() => {
+      const elementosLista = document.querySelectorAll('.listados li')
+      elementosLista.forEach((el) => {
+        const event = fromEvent(el, 'mouseover')
+        event.pipe().subscribe((element: any) => {
+          const icon = element.target.querySelectorAll('i')[0]
+          const svg = element.target.querySelectorAll('svg')[0]
+          if (icon) {
+            icon.setAttribute('style', `color: ${this.getRandomColor()};`)
+          }
+          if (svg) {
+            svg.querySelectorAll('path').forEach((path) => {
+              path.setAttribute('style', `fill: ${this.getRandomColor()};`)
+            })
+          }
+        })
+      })
+    }, 1000)
+  }
+
+  public getRandomColor() {
+    var letters = '0123456789ABCDEF'
+    var color = '#'
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)]
+    }
+    return color
   }
 }

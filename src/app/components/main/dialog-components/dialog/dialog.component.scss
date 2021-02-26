@@ -1,0 +1,15 @@
+#ethereum-dialog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  img {
+    max-width: 100%;
+    height: 450px;
+  }
+  .seccion {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

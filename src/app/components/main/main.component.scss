@@ -11,11 +11,21 @@ $morado: #421bb98a;
     position: fixed;
     z-index: 99;
     width: 100vw;
-    background-color: #ffffff44 !important;
+    background-color: #ffffffeb !important;
     .navbar-collapse {
       text-align: center;
+      .nav-item {
+        border-bottom: 1px solid rgb(218, 218, 218);
+        &:last-child {
+          border-bottom: 0px;
+        }
+      }
       .nav-link {
         color: rgba(0, 0, 0, 0.8) !important;
+        cursor: pointer;
+        &:hover {
+          background: #a7a7a794;
+        }
       }
     }
   }
@@ -23,10 +33,10 @@ $morado: #421bb98a;
 #background {
   background: url(../../../assets/ch-snow-4.png);
   height: 100vh;
-  width: 2600px;
+  min-width: 2550px;
   position: absolute;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 1;
   z-index: 0;
   right: 0;
   position: fixed;
@@ -41,8 +51,7 @@ $morado: #421bb98a;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 20%;
-    min-width: 300px;
+    width: 300px;
     position: fixed;
 
     .image {
@@ -115,9 +124,10 @@ $morado: #421bb98a;
   .main {
     z-index: 1;
     float: right;
-    width: 80%;
+    width: calc(100% - 300px);
     height: 100vh;
     .seccion {
+      overflow-x: hidden;
       position: relative;
       height: 100%;
       width: 100%;
@@ -128,6 +138,7 @@ $morado: #421bb98a;
         font-size: 70px;
         font-family: 'permanente';
         width: fit-content;
+        max-width: 100%;
         color: $morado;
       }
     }
@@ -187,6 +198,7 @@ $morado: #421bb98a;
       }
       .el-yeti {
         width: 340px;
+        max-width: 100%;
         border: 10px solid #0000000f;
         border-bottom: 40px solid #0000000f;
         box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.25) !important;
@@ -211,6 +223,12 @@ $morado: #421bb98a;
         margin-left: 10px;
         cursor: pointer;
         color: black !important;
+      }
+      .pointer {
+        position: absolute;
+        width: 55px;
+        transform: rotate(90deg);
+        padding-right: 12px;
       }
       .title {
         font-size: 22px;
@@ -256,6 +274,76 @@ $morado: #421bb98a;
       left: 4vw;
     }
   }
+
+  .seccion4 {
+    .listados {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 10vh;
+      justify-content: space-around;
+      .lista {
+        font-family: 'inter';
+        flex-basis: 30%;
+        .list-header {
+          font-size: 20px;
+          text-align: center;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+        li {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          i {
+            margin-right: 20px;
+            font-size: 40px !important;
+          }
+          img {
+            margin-right: 20px;
+            width: 40px;
+          }
+          svg {
+            margin-right: 20px;
+            width: 33px;
+          }
+          &:hover {
+            opacity: 0.8;
+            transform: scale(1.6);
+            transition: 0.3s ease-in-out;
+            padding-left: 15%;
+          }
+        }
+      }
+    }
+  }
+
+  .seccion5 {
+    .proyectos {
+      display: flex;
+      flex-direction: row;
+      top: 10vh;
+      position: relative;
+      justify-content: space-around;
+      .card {
+        margin: 10px;
+        flex-basis: 30%;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 33vh;
+    background: linear-gradient(0deg, #ffffff99 0%, white 100%);
+    position: relative;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -283,6 +371,7 @@ $morado: #421bb98a;
     .title-seccion {
       position: initial !important;
       margin: auto !important;
+      font-size: 60px !important;
     }
   }
 
@@ -303,6 +392,20 @@ $morado: #421bb98a;
       position: initial !important;
       width: 90% !important;
       margin: auto !important;
+    }
+  }
+
+  .seccion4 {
+    .listados {
+      display: block !important;
+      top: 0 !important;
+    }
+  }
+
+  .seccion5 {
+    .proyectos {
+      display: block !important;
+      top: 0 !important;
     }
   }
 }

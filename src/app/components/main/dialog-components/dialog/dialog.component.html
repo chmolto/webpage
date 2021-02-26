@@ -1,1 +1,38 @@
-<img *ngIf="tipoDialogo === DIALOG_TYPES.MANCHESTER" src="/assets/manchester.png" />
+<img *ngIf="tipoDialogo === DIALOG_TYPES.MANCHESTER" class="w-100" src="/assets/manchester.png" />
+
+<div *ngIf="tipoDialogo === DIALOG_TYPES.ETHEREUM" id="ethereum-dialog">
+  <div class="seccion">
+    <img src="/assets/raffle.png" />
+    <p class="lead mt-2">{{ languageIsEnglish ? 'Application' : 'Aplicación' }}</p>
+    <div class="text">
+      {{
+        languageIsEnglish
+          ? 'The application consists of a lottery creator, to interact with the contract users use Metamask as a tool to perform transactions and thus communicate with the smart contract. There are two types of users, the manager who decides when the draw is closed, and the players. The players place their bets with the amount they want (more amount, more probability of winning the final jackpot). When the contract manager finishes the draw, the smart contract chooses randomly (based on % participation) and makes a transaction to the winning account with the prize.'
+          : 'La aplicación consiste en un creador de sorteos, para interactuar con el contrato los usuarios utilizan Metamask como herramienta para realizar las transacciones y así comunicarse con el contrato inteligente. Existen dos tipos de usuarios, el manager que es quien decide cuando se cierra el sorteo, y los jugadores. Los jugadores realizan sus apuestas con la cantidad que deseen (más cantidad, más probabilidad de ganar el bote final). Cuando el manager del contrato finaliza el sorteo, el contrato inteligente elige de forma aleatoria (atendiendo a % de participación) y realiza una transacción a la cuenta ganadora con el premio.'
+      }}
+    </div>
+  </div>
+  <div class="seccion">
+    <img src="/assets/deploy.png" />
+    <p class="lead mt-2">
+      {{ languageIsEnglish ? 'Contract' : 'Contrato' }}
+    </p>
+    <p>{{ languageIsEnglish ? 'Advantages of a decentralized application' : 'Ventajas de una apliación descentralizada' }}</p>
+    <ul>
+      <li>
+        <b>{{ languageIsEnglish ? 'Public code' : 'Código público' }} </b>
+        {{
+          languageIsEnglish ? 'Users can view the code and verify its validity' : 'Los usuarios pueden ver el código y verificar su validez'
+        }}
+      </li>
+      <li>
+        <b>Inmanipulable</b
+        >{{
+          languageIsEnglish
+            ? 'Ensures that the results of the lottery cannot be altered'
+            : 'Asegura que no se pueda alterar los resultados del sorteo'
+        }}
+      </li>
+    </ul>
+  </div>
+</div>
