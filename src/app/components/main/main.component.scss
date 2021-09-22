@@ -60,12 +60,16 @@ $morado: #421bb98a;
       flex-direction: column;
       justify-content: center;
       img {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
         border-radius: 100%;
-        border: 16px solid #ffffff5e;
+        border: 14px solid #ffffff5e;
         margin: auto;
         content: url('../../../assets/ch-arriba.png');
+        &:hover {
+          transition: 1s ease-in-out;
+          content: url('../../../assets/ch-abajo.png');
+        }
       }
     }
     .lista {
@@ -85,8 +89,30 @@ $morado: #421bb98a;
       }
     }
 
+    .idioma {
+      flex: 16%;
+      .picks {
+        display: flex;
+        justify-content: center;
+        .pick-sp {
+          padding: 10px;
+          .flag {
+            content: url(../../../assets/sp.png);
+            width: 30px;
+          }
+        }
+        .pick-gb {
+          padding: 10px;
+          .flag {
+            content: url(../../../assets/gb.png);
+            width: 30px;
+          }
+        }
+      }
+    }
+
     .contacto {
-      flex: 30%;
+      flex: 25%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -104,6 +130,9 @@ $morado: #421bb98a;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        a {
+          text-decoration: none;
+        }
         i {
           font-size: 55px !important;
           padding: 10px;

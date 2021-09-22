@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core'
-import { MatDialog } from '@angular/material'
 import { DialogComponent, DIALOG_TYPES } from './dialog-components/dialog/dialog.component'
 import AOS from 'aos'
 import { NoopScrollStrategy } from '@angular/cdk/overlay'
 import { fromEvent } from 'rxjs'
+import { MatDialog } from '@angular/material/dialog'
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',

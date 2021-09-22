@@ -51,6 +51,17 @@
           <div>{{ languageIsEnglish ? 'RESUME' : 'CURRÍCULUM' }}</div></a
         >
       </div>
+      <div class="idioma">
+        <p>Languages</p>
+        <div class="picks">
+          <div (click)="languageIsEnglish = false" class="pick-sp">
+            <div class="flag"></div>
+          </div>
+          <div (click)="languageIsEnglish = true" class="pick-gb">
+            <div class="flag"></div>
+          </div>
+        </div>
+      </div>
       <div class="contacto">
         <span>{{ languageIsEnglish ? 'CONTACT' : 'CONTACTO' }}</span>
         <div class="iconos">
